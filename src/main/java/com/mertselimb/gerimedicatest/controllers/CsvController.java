@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -88,7 +87,7 @@ public class CsvController {
 
             return ResponseEntity.ok("CSV data imported successfully");
         } catch (Exception e) {
-            e.printStackTrace(); // Log or handle the exception appropriately
+            e.printStackTrace();
             return ResponseEntity.internalServerError().body("Error importing CSV data: " + e.getMessage());
         }
     }
